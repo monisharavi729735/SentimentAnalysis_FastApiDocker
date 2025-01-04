@@ -1,0 +1,78 @@
+<html>
+<head>
+    <title>Sentiment Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 50px;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+        }
+        h1 {
+            color: #333333;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 70%; 
+            height: 100px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            resize: none;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sentiment Analysis Tool</h1><br>
+    <textarea id="inputText" placeholder="Enter text..."></textarea><br>
+    <button onclick="getSentiment()">Analyze</button><br>
+    <p id="result"></p>
+    <script>
+        async function getSentiment() {
+            const text = document.getElementById('inputText').value;
+            console.log(text)
+            const response = await fetch('http://localhost:8000/predict/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ text: text })
+            });
+            const data = await response.json();
+            console.log(data)
+            document.getElementById('result').innerText = `Sentiment: ${data.sentiment}`;
+        }
+    </script>
+</body>
+</html>
