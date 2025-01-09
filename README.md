@@ -13,10 +13,10 @@
 <div style="display: flex; justify-content: space-between; gap: 20px;">
     <!-- Image Block 1 -->
     <div>
-        <img src="https://i.imgur.com/HKZJ1wY.png" alt="Description of Image 1" width="500">
+        <img src="https://i.imgur.com/HKZJ1wY.png" alt="Description of Image 1" width="200">
     </div>
     <div>
-        <img src="https://i.imgur.com/SqP4aP7.png" alt="Description of Image 2" width="500">
+        <img src="https://i.imgur.com/SqP4aP7.png" alt="Description of Image 2" width="200">
     </div>
 </div>
 
