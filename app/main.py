@@ -9,8 +9,8 @@ import joblib
 app = FastAPI()
 
 # Ensure models are loaded only if they exist
-model_path = "/model/sentiment_model.pkl"
-vectorizer_path = "/model/vectorizer.pkl"
+model_path = "./model/sentiment_model.pkl"
+vectorizer_path = "./model/vectorizer.pkl"
 
 if not os.path.exists(model_path) or not os.path.exists(vectorizer_path):
     raise FileNotFoundError(f"Required files are missing: {model_path} or {vectorizer_path}")
