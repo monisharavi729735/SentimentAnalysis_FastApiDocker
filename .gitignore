@@ -16,9 +16,6 @@ env/
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
-# Model and other data files (optional: only if you want to ignore model files)
-*.pkl
-*.h5
 
 # Logs
 *.log
