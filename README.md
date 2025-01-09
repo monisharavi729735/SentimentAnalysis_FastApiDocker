@@ -10,13 +10,13 @@
 <hr>
 <p>Here are some images related to the project:</p>
 
-<div style="display: flex; justify-content: space-between; gap: 20px;">
+<div style="display: flex; justify-content: space-between;">
     <!-- Image Block 1 -->
     <div>
-        <img src="https://i.imgur.com/HKZJ1wY.png" alt="Description of Image 1" width="200">
+        <img src="https://i.imgur.com/HKZJ1wY.png" alt="Description of Image 1" width="400">
     </div>
     <div>
-        <img src="https://i.imgur.com/SqP4aP7.png" alt="Description of Image 2" width="200">
+        <img src="https://i.imgur.com/SqP4aP7.png" alt="Description of Image 2" width="400">
     </div>
 </div>
 
